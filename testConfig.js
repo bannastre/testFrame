@@ -1,12 +1,25 @@
-var test;
+$(document).ready(function(){
 
-var isTestPassed = function(test) {
-  console.log(test);
-}
+  var test;
 
-runTests() = function(){
+  var expect = function(test) {
+    // TODO: Have test functions populate from Config file
+    return true
+  }
 
-  console.log('Tests running...');
+  var runTests = function(){
+    console.log('Tests running...');
 
-  isTestPassed(test)
-}
+    // TODO: loop through Tests
+    if (expect() === true) {
+      console.log('Pass');
+    } else {
+      console.log('Fail');
+    }
+
+    console.log('Tests complete.');
+  }
+
+  runTests();
+
+});
