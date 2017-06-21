@@ -1,11 +1,16 @@
 $(document).ready(function(){
 
-  var test;
+  var objectUnderTest;
 
-  var expect = function(test) {
-    // TODO: Have test functions populate from Config file
-    return true
+  var expect = function(objectUnderTest) {
+    return objectUnderTest;
   }
+
+  expect.prototype.toEq = function(expectedResult){
+    objectUnderTest === expectedResult;
+  }
+
+  expect(one).toEq('1')
 
   var runTests = function(){
     console.log('Tests running...');
