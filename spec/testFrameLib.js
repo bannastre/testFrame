@@ -16,5 +16,7 @@ var expect = function(objectUnderTest) {
     return ('Pass: ' + objectUnderTest + " has content " + expectedResult + ".");
   }
 
-  return {toEqual: toEqual}
+  return { toEqual: toEqual,
+           toHaveContent: toHaveContent
+  }
 }

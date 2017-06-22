@@ -2,8 +2,8 @@
 
 var project = new Project();
 
-function runTests(){
+expect(project.one).toEqual(project.another);
 
-  return expect(project.one).toEqual(project.another)
+expect('whereAmI').toHaveContent('You are ');
 
-}
+console.log('All tests passed');
